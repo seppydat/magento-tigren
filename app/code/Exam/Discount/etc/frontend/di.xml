@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="hidebutton" type="Exam\Discount\Plugin\Product" sortOrder="1"/>
+    </type>
+    <type name="Magento\Catalog\Pricing\Render\FinalPriceBox">
+        <plugin name="price_hide" type="Exam\Discount\Plugin\Product" sortOrder="1" disabled="false"/>
+    </type>
+</config>

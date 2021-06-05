@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Exam_Discount::Parent"
+             title="Discount"
+             module="Exam_Discount"
+             sortOrder="10"
+             resource="Magento_Backend::admin"/>
+        <add id="Exam_Discount::DiscountManagement"
+             title="Discount Management"
+             module="Exam_Discount"
+             action="discount_admin/discount/view"
+             sortOrder="10"
+             parent="Exam_Discount::Parent"
+             resource="Magento_Backend::admin"/>
+    </menu>
+</config>

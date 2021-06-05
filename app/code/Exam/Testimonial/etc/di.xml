@@ -1,0 +1,31 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="exam_testimonial_data_source" xsi:type="string">ExamTestimonial</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="ExamTestimonial"
+                 type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">testimonial_content</argument>
+            <argument name="resourceModel" xsi:type="string">Exam\Testimonial\Model\ResourceModel\TestimonialContent</argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="exam_customer_data_source" xsi:type="string">ExamTestimonialCustomer</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="ExamTestimonialCustomer"
+                 type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">customer_entity</argument>
+            <argument name="resourceModel" xsi:type="string">Magento\Customer\Model\ResourceModel\Customer\Collection</argument>
+        </arguments>
+    </virtualType>
+</config>

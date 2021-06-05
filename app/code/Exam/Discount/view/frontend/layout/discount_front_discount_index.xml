@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Exam\Discount\Block\Discount\ListDiscount"
+                   name="exam.discount.layout.listdiscount"
+                   template="Exam_Discount::list_discount_of_customer_group.phtml"
+                   cacheable="false"
+            />
+        </referenceContainer>
+    </body>
+</page>

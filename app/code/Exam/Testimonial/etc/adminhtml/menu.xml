@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Exam_Testimonial::ParentTestimonial"
+             title="Testimonial"
+             module="Exam_Testimonial"
+             sortOrder="10"
+             resource="Magento_Backend::admin"/>
+        <add id="Exam_Testimonial::TestimonialContent"
+             title="Content"
+             module="Exam_Testimonial"
+             action="testimonial_admin/testimonial/view"
+             sortOrder="10"
+             parent="Exam_Testimonial::ParentTestimonial"
+             resource="Magento_Backend::admin"/>
+        <add id="Exam_Testimonial::TestimonialCustomer"
+             title="Customer"
+             module="Exam_Testimonial"
+             action="testimonial_admin/customer/view"
+             sortOrder="20"
+             parent="Exam_Testimonial::ParentTestimonial"
+             resource="Magento_Backend::admin"/>
+    </menu>
+</config>

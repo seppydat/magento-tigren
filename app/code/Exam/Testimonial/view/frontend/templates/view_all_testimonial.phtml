@@ -1,0 +1,34 @@
+<?php
+    use Exam\Testimonial\Block\TestimonialShowALl;
+    /** @var TestimonialShowALl $block */
+?>
+
+<h1>All testimonial</h1>
+<form method="post"
+      action="<?= $block->getUrl('testimonial/testimonial/formcreate') ?>"
+>
+    <input type="submit" value="Create Testimonial">
+</form>
+<?php foreach ($block->getAllDataTestimonial() as $customer) {?>
+    <div>
+        <div style="font-weight: bold;">
+            <img src="<?=  $customer->getData('customer_img') ?>" width="60px" height="60px" alt="chua co anh">
+            <?=  $customer->getData('first_name') . ' ' .$customer->getData('last_name')  ?> -
+            <?=  $customer->getData('customer_email') ?>
+        </div>
+        <div>
+            <p>" <?=  $customer->getData('content') ?> "</p>
+            <p>
+                <?php
+                if (strtotime($customer->getData('update_at')) > strtotime($customer->getData('create_at'))) {
+                    echo "da sua vao: ".$customer->getData('update_at');
+                } else {
+                    echo "da dang vao: ".$customer->getData('create_at');
+                }
+                ?>
+                - Danh gia: <?= $customer->getData('rating') ?>sao
+            </p>
+        </div>
+    </div>
+    <hr>
+<?php } ?>

@@ -1,0 +1,6 @@
+<?php use Exam\Discount\Block\Discount\ListDiscount; /** @var ListDiscount $block */ $dataListDiscount = $block->getData('discount'); ?> <div class="table-wrapper orders-history"><table class="data table table-order-items history" id="my-orders-table"><caption class="table-caption"><?php echo __('List Discount') ?></caption><thead><tr><th scope="col" class="col id"><?php echo __('ID') ?></th><th scope="col" class="col name"><?php echo __('Name') ?></th><th scope="col" class="col amount"><?php echo __('Discount Amount') ?></th><th scope="col" class="col date"><?php echo __('Start Time') ?></th><th scope="col" class="col date"><?php echo __('End Time') ?></th></tr></thead><tbody><?php foreach ($dataListDiscount as $discount): ?> <tr><td class="col id"><?php echo $discount['id_discount'] ?></td><td class="col name"><?php echo $discount['name'] ?></td><td class="col amount"><?php echo $discount['discount_amount'] ?></td><td class="col date"><?php echo $discount['start_time'] ?></td><td class="col date"><?php echo $discount['end_time'] ?></td></tr><?php endforeach; ?></tbody></table><script type="text/x-magento-init">
+        {
+            "*": {
+                "test": {}
+            }
+        }</script></div>
